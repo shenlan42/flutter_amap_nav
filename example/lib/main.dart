@@ -4,12 +4,13 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:amap_nav/amap_nav.dart';
 import 'package:amap_nav/load.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -62,21 +63,9 @@ class _MyAppState extends State<MyApp> {
 
                   })
               ),
-              Container(
-                width: 400,
-                height: 400,
-                child: const navWidget(),
-              ),
-              Positioned(
-                bottom: 0,
-                  top: 40,
-                  child:
-                Container(
-                  width: 400,
-                  height: 400,
-                  color: Colors.yellowAccent,
-                )
-              )
+              const navWidget(),
+
+
 
             ],
           ),
@@ -84,4 +73,6 @@ class _MyAppState extends State<MyApp> {
       ),
     );
   }
+
+
 }

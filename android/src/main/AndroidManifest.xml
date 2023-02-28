@@ -47,6 +47,7 @@
             android:theme="@android:style/Theme.NoTitleBar"
             android:configChanges="orientation|keyboardHidden|screenSize|navigation" />
 
+
     </application>
 
 </manifest>
